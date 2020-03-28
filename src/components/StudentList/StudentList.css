@@ -21,3 +21,7 @@ button:hover {
   margin-bottom: 8px;
   padding: 8px;
 }
+
+#studentItem {
+  padding: 0px 8px;
+}

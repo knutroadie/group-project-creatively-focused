@@ -43,7 +43,7 @@ class App extends Component {
         <ScrollToTop>
         <div>
           <div className="nav">
-            <header className="nav-title" id="CFlogo">CREATIVELY FOCUSED</header>
+            <header className="nav-title" id="CFlogo">CREATIVELY FOCUSED APP</header>
           </div>
           <Nav />
           <Switch>

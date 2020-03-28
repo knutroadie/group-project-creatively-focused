@@ -42,20 +42,20 @@ class UserItem extends Component {
     render() {
         return (
             <div>
-                <Grid container spacing={24}>
+                {/* <Grid container spacing={24}>
                     <Grid item xs={12}>
                         <Paper>
-                            <CardContent id="userCard">
+                            <CardContent id="userCard"> */}
                                 <li>
-                                    {this.props.teacher.lastname}, {this.props.teacher.firstname}
-                                    <div id="rightButton">
-                                        <Button size="small" variant="outlined" key={this.props.teacher.id} onClick={(event) => this.goDetail(event, this.props.teacher)}>view user details</Button>
+                                    {/* {this.props.teacher.lastname}, {this.props.teacher.firstname} */}
+                                    <div id="Button">
+                                        <Button id="userItem" size="large" variant="text" key={this.props.teacher.id} onClick={(event) => this.goDetail(event, this.props.teacher)}>{this.props.teacher.lastname}, {this.props.teacher.firstname}</Button>
                                     </div>
                                 </li>
-                            </CardContent>
+                            {/* </CardContent>
                         </Paper>
                     </Grid>
-                </Grid>
+                </Grid> */}
             </div>
         )
     }

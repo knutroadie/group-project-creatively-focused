@@ -13,7 +13,7 @@ class UserList extends Component {
         return (
             <div>
                 <ul>
-                    <h1>USER LIST</h1>
+                    <h2 className="user-list">USER LIST</h2>
                     <Link style={{ backgroundColor: 'transparent' }} className="connectorLink" to="/adminform">
                         <div id="Button">
                             <button className="linkBtn user-add" >

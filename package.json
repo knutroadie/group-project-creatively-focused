@@ -34,7 +34,8 @@
     "reactjs-popup": "^1.5.0",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-saga": "^1.0.2"
+    "redux-saga": "^1.0.2",
+    "twilio": "^3.40.0"
   },
   "scripts": {
     "start": "node server/server.js",
@@ -45,8 +46,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10",
-    "twilio": "^3.40.0"
+    "nodemon": "^1.18.10"
   },
   "browserslist": [
     ">0.2%",

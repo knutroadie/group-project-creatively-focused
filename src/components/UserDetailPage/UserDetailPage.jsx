@@ -42,7 +42,6 @@ class UserDetailPage extends Component {
         this.props.history.push(`/adminhome`)
     }
 
-
     render() {
         let user = this.props.reduxState.teacherDetail;
         return (

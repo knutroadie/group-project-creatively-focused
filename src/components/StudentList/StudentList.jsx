@@ -29,7 +29,7 @@ class StudentList extends Component {
         return (
             <div>
                 <ul>
-                    <h1 className="student-list">STUDENT LIST</h1>
+                    <h2 className="student-list">STUDENT LIST</h2>
                     <Link style={{ backgroundColor: 'transparent' }} className="connectorLink" to="/addstudent">
 
                         <div id="Button">

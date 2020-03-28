@@ -44,20 +44,19 @@ class StudentItem extends Component {
     render() {
         return (
             <div>
-                <Grid container spacing={24}>
+                {/* <Grid container spacing={24}>
                     <Grid item xs={12}>
                         <Paper >
-                            <CardContent id="userCard">
+                            <CardContent id="userCard"> */}
                                 <li>
-                                    {this.props.student.lastname}, {this.props.student.firstname}
-                                    <div id="rightButton">
-                                        <Button id="rightButton" variant="outlined" key={this.props.student.id} onClick={(event) => this.getDetail(event, this.props.student.id)}>view details</Button>
+                                    <div id="Button">
+                                        <Button id="studentItem" size="large" variant="text" key={this.props.student.id} onClick={(event) => this.getDetail(event, this.props.student.id)}>{this.props.student.lastname}, {this.props.student.firstname}</Button>
                                     </div>
                                 </li>
-                            </CardContent>
+                            {/* </CardContent>
                         </Paper>
                     </Grid>
-                </Grid>
+                </Grid> */}
             </div>
         )
     }
