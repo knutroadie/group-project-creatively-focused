@@ -73,8 +73,8 @@ class StudentDetailPage extends Component {
                                         <img src={logo} alt="sparkle" />
                                         <div className="content">Are you sure you want to delete this student?</div>
                                         <div className="actions">
-                                            <button className="button-popup" onClick={(event) => this.deleteStudent(event)}>YES</button>
-                                            <button className="button-popup" onClick={() => close()}>NO</button>
+                                            <Button className="button-popup" onClick={(event) => this.deleteStudent(event)}>YES</Button>
+                                            <Button className="button-popup" onClick={() => close()}>NO</Button>
                                         </div>
                                     </div>
                                 )}

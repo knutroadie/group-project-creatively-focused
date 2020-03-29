@@ -33,7 +33,7 @@ class TaskListItem extends Component {
             type: 'EDIT_STUDENTEVENT',
             payload: id
         })
-      }
+    }
 
     render() {
         let task = this.props.task
@@ -41,15 +41,18 @@ class TaskListItem extends Component {
             <div>
                 {task.map(task => {
                     return (
-                        <li>
-                            <input 
-                                type="checkbox" 
-                                key={task.id}
-                                onClick={(event) => this.updateStudentEvent(event, task.id)}>
-                            </input>
-                            <div>{moment(task.due_date).format('MM-DD-YYYY')}</div>
-                            <div>{task.task}</div>
-                        </li>
+                        <div>
+                            <li key={task.id}>
+                                <input 
+                                    type="checkbox" 
+                                    key={task.id}
+                                    onClick={(event) => this.updateStudentEvent(event, task.id)}>
+                                </input>
+                                {moment(task.due_date).format('MM-DD-YYYY')}<br />
+                                {task.task}<br />
+                            </li>
+                            <br />
+                        </div>
                     )
                 })}
             </div>
