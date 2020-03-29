@@ -129,7 +129,6 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 
 // updates a single student's event
 router.put('/:id', rejectUnauthenticated, (req, res) => {
-    console.log('in router PUT for studentEvent', req.body);
     let sqlText = `
     UPDATE "student_event" 
     SET "completed" = NOT "completed",

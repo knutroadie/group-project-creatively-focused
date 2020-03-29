@@ -65,7 +65,8 @@ class StudentDetailPage extends Component {
                     </ul>
                 </Typography>
                     <div id="Button">
-                        <Button size="small" variant="outlined" onClick={this.editStudent}>Edit</Button>
+                        <Button size="small" variant="outlined" onClick={this.editStudent}>EDIT</Button>
+                        <Button>
                             <Popup trigger={<Button size="small" variant="outlined">DELETE</Button>} modal>
                                 {close => (
                                     <div className="popup-contents">
@@ -78,6 +79,7 @@ class StudentDetailPage extends Component {
                                     </div>
                                 )}
                             </Popup>
+                        </Button>
                         <Button size="small" variant="outlined" onClick={this.goToStudentList}>BACK TO STUDENT LIST</Button>
                     </div>
                 <TaskList />
