@@ -81,15 +81,40 @@ class TaskListItem extends Component {
     //         </div>
     //     )
     // }
+
+    // updateStudentEvent = (event, id) => {
+    //     this.props.dispatch({
+    //         type: 'EDIT_STUDENTEVENT',
+    //         payload: id
+    //     })
+    // }
+
+    updateStudentEvent = (event, id) => {
+        // console.log('updating student event', event, propertyValue);
+        console.log(id);
+        // dispatch calls 'EDIT_STUDENTEVENT' which'll make a call to redux/database to edit an event
+        this.props.dispatch({
+            type: 'EDIT_STUDENTEVENT',
+            payload: id
+        })
+      }
+
     render() {
         let task = this.props.task
-        console.log(task);
         return (
             <div>
                 {task.map(task => {
                     return (
                         <div>
-                            <li>{moment(task.due_date).format('MM-DD-YYYY')}</li>
+                            <li>
+                                <input 
+                                    type="checkbox" 
+                                    key={task.id}
+                                    onClick={(event) => this.updateStudentEvent(event, task.id)}>
+                                </input>
+                                <div>{task.task}</div>
+                                <div>{moment(task.due_date).format('MM-DD-YYYY')}</div>
+                            </li>
                         </div>
                     )
                 })}

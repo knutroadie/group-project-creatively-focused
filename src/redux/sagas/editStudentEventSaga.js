@@ -9,7 +9,9 @@ function* editStudentEventSaga() {
 // updating a targeted row in the database
 // afterward, it does a get to refresh the page
 function* editStudentEvent(action) {
-    yield axios.put(`/api/studentEvent/${action.payload.id}`, action.payload);
+    console.log(action);
+    
+    yield axios.put(`/api/studentEvent/${action.payload}`);
     yield put({ type: 'GET_STUDENTEVENT' });
 }
 

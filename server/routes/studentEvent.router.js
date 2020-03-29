@@ -135,7 +135,7 @@ router.put('/:id', rejectUnauthenticated, (req, res) => {
     SET "completed" = NOT "completed",
     "date_completed" = now(),
     "completed_by" = ${req.user.id}
-    WHERE "id"=${req.body.id};`
+    WHERE "id"=${req.params.id};`
     pool.query(sqlText)
         .then((result) => {
             res.sendStatus(200);

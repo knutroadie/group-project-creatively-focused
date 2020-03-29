@@ -64,17 +64,13 @@ class UserPage extends Component {
 
   };
 
-  updateStudentEvent = (e, propertyValue, id) => {
+  updateStudentEvent = (e, id) => {
     // console.log('updating student event', event, propertyValue);
     console.log(id);
     // dispatch calls 'EDIT_STUDENTEVENT' which'll make a call to redux/database to edit an event
     this.props.dispatch({
       type: 'EDIT_STUDENTEVENT',
-      payload: {
-        key: propertyValue,
-        value: 'true',
-        id: id
-      }
+      payload: id
     })
   }
 
@@ -158,7 +154,7 @@ class UserPage extends Component {
                   <Checkbox
                     key={event.id}
                     checked={this.state.checkedB}
-                    onChange={(e) => this.updateStudentEvent(e, event, event.id)}
+                    onChange={(e) => this.updateStudentEvent(e, event.id)}
                     value="true"
                     color="primary"
                   /></TableCell>

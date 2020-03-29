@@ -66,7 +66,7 @@ class StudentDetailPage extends Component {
                 </Typography>
                     <div id="Button">
                         <Button size="small" variant="outlined" onClick={this.editStudent}>Edit</Button>
-                            <Popup trigger={<Button size="small" variant="outlined" > DELETE </Button>} modal>
+                            <Popup trigger={<Button size="small" variant="outlined">DELETE</Button>} modal>
                                 {close => (
                                     <div className="popup-contents">
                                         <img src={logo} alt="sparkle" />

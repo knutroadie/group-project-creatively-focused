@@ -9,7 +9,7 @@ function* editUserSaga() {
 // updating a targeted row in the database
 // afterward, it does a get to refresh the page
 function* editUser(action) {
-    yield axios.put(`/api/teacherList/${action.payload.id}`, action.payload);
+    yield axios.put(`/api/teacherList/${action.payload}`, action.payload);
     yield put({ type: 'GET_TEACHERS' });
 }
 

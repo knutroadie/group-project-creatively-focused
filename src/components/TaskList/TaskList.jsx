@@ -36,21 +36,20 @@ class TaskList extends Component {
         id: this.props.reduxState.studentEvent
     }
 
-    componentDidMount() {
-        this.props.dispatch({
-            type: 'GET_TASKS'
-        })
-    }
+    // componentDidMount() {
+    //     this.props.dispatch({
+    //         type: 'GET_STUDENTEVENT'
+    //     })
+    // }
 
-    handleChange = name => event => {
-        this.setState({ [name]: event.target.checked });
+    // handleChange = name => event => {
+    //     this.setState({ [name]: event.target.checked });
+    // };
 
-    };
-
-    updateStudentEvent = (e, event) => {
+    updateStudentEvent = (event, id) => {
         this.props.dispatch({
             type: 'EDIT_STUDENTEVENT',
-            payload: event
+            payload: id
         })
     }
 
