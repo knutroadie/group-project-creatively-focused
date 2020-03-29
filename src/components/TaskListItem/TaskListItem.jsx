@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import moment from 'moment';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Checkbox from '@material-ui/core/Checkbox';
 // import Moment from 'react-moment';
 // import Checkbox from '@material-ui/core/Checkbox';
 
@@ -42,15 +45,16 @@ class TaskListItem extends Component {
                 {task.map(task => {
                     return (
                         <div>
-                            <li key={task.id}>
-                                <input 
-                                    type="checkbox" 
+                            <ListItem key={task.id}>
+                                <Checkbox
                                     key={task.id}
                                     onClick={(event) => this.updateStudentEvent(event, task.id)}>
-                                </input>
+                                </Checkbox>
+                                <ListItemText>
                                 {moment(task.due_date).format('MM-DD-YYYY')}<br />
                                 {task.task}<br />
-                            </li>
+                                </ListItemText>
+                            </ListItem>
                             <br />
                         </div>
                     )
